@@ -14,7 +14,8 @@ export class NewListComponent implements OnInit {
   }
 
   createList(title: string) {
-    this.taskService.createList(title).subscribe( (response: any) => {
+    this.taskService.createList(title).subscribe( (response: any) => {      
+      // Go to lists/response.id
       
     });
   }
