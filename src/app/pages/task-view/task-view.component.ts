@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { TaskService } from 'src/app/task.service';
 
 @Component({
   selector: 'app-task-view',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskViewComponent implements OnInit {
 
-  constructor() { }
+  lists: any;
 
-  ngOnInit(): void {
+  constructor(private taskService: TaskService, private route: ActivatedRoute) {
+
+   }
+
+  ngOnInit() {
+    this.route.params.subscribe( (params: Params) => {
+
+    });
+
+    // this.taskService.getLists().subscribe( (lists: any[]) => {
+    //   this.lists = lists;
+    // });
   }
 
 }
